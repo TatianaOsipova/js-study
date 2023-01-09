@@ -1,17 +1,18 @@
 // Data types - number.
+
 // let - изменяемая переменная.
-let number = 5;
-number = 10;
-console.log(number);
+// let number = 5;
+// number = 10;
+// console.log(number);
 
 // const - неизменяемая переменная.
-const sum = 8;
-console.log(sum);
+// const sum = 8;
+// console.log(sum);
 
 // data types - string.
 // всегда пишется в кавычках.
-let text = 'Hello';
-console.log(text);
+// let text = 'Hello';
+// console.log(text);
 
 // let a = 5;
 // let b = '5';
@@ -49,13 +50,13 @@ console.log(text);
 
 // Data types - object
 // Чтобы создать объект мы должны объявить его, как const
-const obj = {
-    name: 'Igor',
-    height: 180
-}
-console.log(obj.name);
-// or
-console.log(obj['name']);
+// const obj = {
+//     name: 'Igor',
+//     height: 180
+// }
+// console.log(obj.name);
+// // or
+// console.log(obj['name']);
 
 
 // obj - имя объекта, после точки имя ключа,
@@ -63,3 +64,87 @@ console.log(obj['name']);
 // и чье значение мы хотим получить
 // Объект отличается от массива тем, 
 // что имеет ключ(стоит перед :) - значение( после :)
+
+// alert('Hello');
+
+// const result = confirm('How are you?');
+// console.log(result);
+
+// const answer =prompt('How old are you?', '');
+// console.log(answer);
+
+// Ответ будет строкой.
+// Если переменная строка, но в ней есть число, можно перести
+// в число поставив +prompt(унарный плюс).
+// Если вводить строку(текст), то из текста число не получить
+
+// const answer =+42prompt('How old are you?', '');
+// console.log(typeof(answer));
+
+// typeof ставится, чтобы узнать тип данных
+
+
+// const name = 'Ian';
+// console.log('Hi ' + name);
+
+// Интерполяция - вместо + используем $ и все записываем
+// в одних `` кавычках.
+
+// const name = 'Ian';
+// console.log(`Hi ${name}`);
+
+// Динамическая генерация ссылок
+
+// const user = 'durov';
+// console.log(`https://vk.com/${user}`);
+
+// Существуют операторы:
+// инкремент - увеличивает число на единицу,
+// декримент - уменьшает.
+
+// let a = 10;
+// let b = 10;
+
+// a--;
+// b++;
+// console.log(a, b);
+
+// Знаки -- / ++ можно писать до переменной или после нее.
+// !Но нельзя ставить знаки в console.log(a--, b++) после переменной.
+// !Сработает только до --a / ++b.
+
+// let a = 10;
+// let b = 10;
+// console.log(--a, ++b);
+
+// С помощью % можно проверить число на четность/нечетность
+// console.log(5 % 2);
+
+// console.log(2*4 == 8);
+// == оператор нестрогого сравнение,
+// Так можно сравнить и выведется true/false
+
+// console.log(2*4 === '8')
+// === оператор строгого сравнения и выведет false,
+// так как нельзя сравнивать число и строку
+
+// Оператор != неравно.
+// console.log(2*4 != 9);
+// Чтобы вывести true, когда выражение не равно
+
+// const isChecked_1 = true;
+// const isChecked_2 = true;
+
+// console.log(isChecked_1 && isChecked_2);
+// Убедится, что все действия выполнены используем оперсанд $$
+// Для этого оператора важно, чтобы оба события были true
+
+const isChecked_1 = true;
+const isChecked_2 = true;
+console.log(isChecked_1 || isChecked_2);
+// Для оператора || или важно, чтобы хоть какое-то
+// значение было true 
+
+
+
+
