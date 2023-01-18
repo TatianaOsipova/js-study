@@ -190,3 +190,86 @@ const summer = (a, b) => {
     a+b;
 };
 summer(2, 3);
+
+Свойства строк и чисел
+
+const str = 'test';
+console.log(str.length);
+
+Тоже самое св-во можно применить к массиву. 
+Мы можем текс в const заменить на массив из 3-х чисел
+const str = [1, 2, 3];
+console.log(str.length);
+
+Можем вывести отдельный элемент массива
+или отдельную букву
+const str = [1, 2, 3];
+console.log(str[2]);
+
+const str = 'text';
+console.log(str[2]);
+
+Методы строк и чисел(Их больше, чем свойств)
+Их отличие в том, что в конце указываем пустые скобки
+
+Смена регистра текста
+const str = 'text';
+console.log(str.toUpperCase());
+
+Метод проверки, есть ли кусочек текста в переменной
+
+const str = 'text';
+console.log(str.toUpperCase());
+
+Помогает понять с какого символа начинается текст
+const str = 'text';
+const log = 'hello world'; 
+
+console.log(log.indexOf('world'));
+выведет 6, потому что слово начинается с 6 символа
+
+Можно также определить, присутствует ли слово в строчке
+const str = 'text';
+const log = 'hello'; 
+
+console.log(log.indexOf('world'));
+выведет -1, так как слова начинается
+
+Вырезать слово - slice
+Такая команда из одного слово вырежит его целиком
+const str = 'text';
+const log = 'hello world'; 
+console.log(log.slice(6));
+
+Можно указать с какого по какое число нужно 
+вырезать слово
+
+const str = 'text';
+const log = 'hello world'; 
+console.log(log.slice(6, 10));
+
+Можно указать и отрицательное значение, 
+но порядок будет наоборот
+
+const str = 'text';
+const log = 'hello world'; 
+console.log(log.slice(6, 10));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
