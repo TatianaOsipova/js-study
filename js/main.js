@@ -259,6 +259,71 @@ console.log(log.slice(6, 10));
 
 
 
+Массивы, методы к ним и их копирование
+Push - добавление элемента в конец массива 
+const massive = [1, 2, 3];
+massive.push(10);
+console.log(massive);
+
+Pop - удаление последнего элемента в массиве
+const massive = [1, 2, 3];
+massive.push(10);
+massive.pop();
+console.log(massive);
+
+Join - из массива сделать строку
+const massive = [1, 2, 3];
+massive.push(10);
+console.log(massive.join(' ,'));
+
+Клонирование и копирование массивов
+const massive = [1, 2, 3];
+const massive2 = massive; ссылка на массив, поверхностная копия
+console.log(massive, massive2);
+massive2.push(5);
+
+Массивы, объекты, функции - сложный тип данных и 
+они просто не копируются
+
+Строка, число - простой тип данных
+
+Метод slice возьмет наш массив, разделит на элементы
+(в нашем случае на 3 элемента) и заново склеит их в массив, но уже новый
+const massive = [1, 2, 3];
+const massive2 = massive;
+console.log(massive, massive2);
+
+massive2.push(5);
+console.log(massive, massive2);
+
+const massive3 = massive.slice();
+massive3.push(6);
+console.log(massive, massive2, massive3);
+
+const massive2 = [...massive];
+massive2.push(2);
+console.log(massive, massive2);
+
+
+Так можно объединить несколько массивов сразу
+const a = [1, 2, 3];
+const b = [1, 5, 8];
+const c = [3, 5, 6];
+
+const sum = [...a, ...b, ...c, 34, 56];
+console.log(sum);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
