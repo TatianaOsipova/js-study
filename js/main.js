@@ -296,6 +296,71 @@ console.log(log.slice(6, 10));
 
 
 
+// #8
+Callback функции и зачем они нужны - эти функции можно
+вызывать только в тот момент, 
+когда предыдущая функция завершила свою работу.
+ function first () {
+    console.log('Hello');    
+ }
+ function second () {
+    console.log('world');    
+ }
+ first();
+ second();
+ Выводит оба слова.
+ Можно заложить условие срабатывания второй функции-
+ нужно в качестве аргумента указать callback(как домино) в первой функции
+ и в этой же функции в конце тела вызвать ее(как обычно).
+ function first (callback) {
+    console.log('Hello');   
+    callback(); 
+ }
+ function second () {
+    console.log('world');    
+ }
+ first(second);
+
+ Если нужно удалить св-во из object,
+ нужно указать delete object.св-во. 
+ const object = {
+    name: 'Ivan',
+    age: 18
+ }
+ delete object.name;
+ console.log(object);
+
+Переборы в объектах. Объекты, их св-ва и возможности
+const object = {
+    name: 'Ivan',
+    age: 18,
+    height: 180,
+    weigth: 70
+ }
+ for (let key in object) {
+    console.log(`Свойство ${key} имеет значение${object[key]}`);
+ }
+ console.log(object);
+
+ Можно получить все ключи объекта
+ const object = {
+    name: 'Ivan',
+    age: 18,
+    height: 180,
+    weigth: 70
+ }
+ for (let key in object) {
+    console.log(`Свойство ${key} имеет значение${object[key]}`);
+ }
+ console.log(Object.keys(object).length);
+
+Деструктуризация - применяется, если нужно вытащить из object
+какие-то данные и потом использовать в коде, но не прибегать 
+к постоянному вызову объекта.
+const {name, age} = object;
+console.log(name, age);
+
+
 
 // #9
 Массивы, методы к ним и их копирование
