@@ -485,31 +485,87 @@
 
 // Действия над элементами
 // Смена стилей
-box.style.height = '200px';
+// box.style.height = '200px';
 
-box.style.backgroundColor = 'grey';
+// box.style.backgroundColor = 'grey';
 
 // Если есть несколько стилей,которыми
 // хотите наделить элемент, 
 // то лучше использовать cssText
-box.style.cssText = 'height: 200px; background-color: grey;';
+// box.style.cssText = 'height: 200px; background-color: grey;';
 
 // Можно добавлять элементы на страницу
 // const div = document.createElement('div');
 // div.classList.add('button-red');
 // document.body.append(div); Элемент добавится в конце кода
 
-const div = document.createElement('div');
-div.classList.add('button-red');
-document.body.prepend(div); 
+// const div = document.createElement('div');
+// div.classList.add('button-red');
+// document.body.prepend(div); 
 // Элемент добавится в начале кода
 // Таким образом можно создать пустые элементы
 
 // innerHTML - помогает наполнить наш элемент кодом
-dispatchEvent.innerHTML = '<h1>Hello</h1>'
+// dispatchEvent.innerHTML = '<h1>Hello</h1>'
 
-Можно удалять элементы со страницы
-div.remove();
+// Можно удалять элементы со страницы
+// div.remove();
+
+
+
+// #13
+// События и их обработчики
+// const button = document.querySelector('button');
+// const link = document.querySelector('.link');
+// const buttons = document.querySelectorAll('button');
+
+// buttons.forEach(item => {
+//     item.addEventListener('click', (event) => {
+//         event.targer.remove();
+//     });
+// });
+
+// Чтобы функция сработала только один раз
+// buttons.forEach(item => {
+//     item.addEventListener('click', (event) => {
+//         event.targer.remove();
+//     }, {once: false});
+// });
+
+// mouseenter - кнопка исчезает при соприкосновении с курсором
+// button.addEventListener('mouseenter', (item) => {
+//     console.log('hello');
+//     item.target.remove();
+// });
+
+
+// preventDefaul - позволяет, чтобы ссылка никуда не переходила
+// link.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     console.log('Hello');
+// });
+
+// #14
+// Таймер
+// const  timer = setTimeout(function() {
+//     console.log('Прошло 2 секунды');
+// }, 2000);
+
+function logger() {
+    console.log('Прошло 5 секунд');
+}
+// const timerLogger =  setTimeout(logger, 5000);
+
+// Отключить таймер
+// clearInterval(timerLogger);
+
+// Чтобы таймер работал интервально, меняем const на let
+let timerLogger =  setTimeout(logger, 5000);
+timerLogger = setInterval(logger, 2000);
+
+
+
+
 
 
 
